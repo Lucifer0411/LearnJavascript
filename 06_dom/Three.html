@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom manipulation</title>
+</head>
+<body style="background-color: black;color:white;">
+
+    <button style="background-color: gray;color:white;"
+        onClick="createEle()"
+    >createElementbutton</button>
+
+
+
+
+    <script>
+        // document.getElementsByTagName('body').createElement('div',"mynam");
+        
+        const mydiv=document.createElement('div');
+        console.log(mydiv);
+        // const myHeading=mydiv.createElement('h1').innerText='my heading';
+        // console.log(myHeading);
+        mydiv.className="main";
+        mydiv.id="myId";
+        // mydiv.innerText="sanjay pawar";
+        mydiv.style.color='white';
+        const addTxt=document.createTextNode("sanjay pawar")
+        mydiv.appendChild(addTxt);
+
+        document.body.appendChild(mydiv);
+
+        function createEle(){
+            let newEle=document.createElement('h3');
+            newEle.innerText='i am heading';
+            // newEle.style.backgroundColor='yellow',color='black';
+            newEle.setAttribute('style','background-color:yellow;color:black')
+            console.log(newEle);
+            // console.log(mydiv);
+            document.body.appendChild(newEle)
+        }
+
+
+
+    </script>
+    
+</body>
+</html>
