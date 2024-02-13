@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Sanjay pawar</h1>
+    <button id="cancel">cancel</button>
+    <script>
+        // setTimeout(()=>{
+        //     console.log('sanjay pawar')
+        // },2000)
+        const saySanjay=function(){
+            console.log('sanjay')
+        document.querySelector('h1').innerHTML='best js series'
+
+        }
+        const changeMe=setTimeout(saySanjay,3000);
+        document.querySelector('#cancel').addEventListener('click',()=>{
+            clearTimeout(changeMe);
+            console.log('stop')
+        })
+
+    </script>
+</body>
+</html>
