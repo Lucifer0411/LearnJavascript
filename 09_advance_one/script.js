@@ -1,17 +1,12 @@
-const xml=new XMLHttpRequest()
-const requestUrl='https://api.github.com/users/Lucifer0411';
-xml.open('GET',requestUrl);
-xml.onreadystatechange=()=>{
-    console.log(xml.readyState)
-    if(xml.readyState===4){
-        console.log(typeof this.responseText);
-
-        const data=JSON.parse(this.responseText);
-        console.log(data.followers)
+const requestUrl = 'https://api.github.com/users/Lucifer0411'
+const xhr = new XMLHttpRequest();
+xhr.open('GET', requestUrl)
+xhr.onreadystatechange = function(){
+    console.log(xhr.readyState);
+    if (xhr.readyState === 4) {
+        const data = JSON.parse(this.responseText)
+        console.log(typeof data);
+        console.log(data.followers);
     }
-    // console.log((this.responseText));
-
-
-    
 }
-const mgs=xml.send();
+xhr.send();
