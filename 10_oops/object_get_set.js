@@ -3,12 +3,12 @@ const User={
     _password:'asdfj',
 
     get email(){
-        return this.email.toUpperCase();
+        return this._email.toUpperCase();
     },
     set email(value){
-        this.email=value
+        this._email=value
     }
 }
 
 const tea=Object.create(User)
-console.log(tea._email);
+console.log(tea.email);
